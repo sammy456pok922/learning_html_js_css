@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+</body>
+
+<button onclick="buttonClick()">click to open Roblox</button>
+<button onmouseenter="dontComeNear()">Don't come near me</button>
+<button onmouseleave="dontLeave()">dont leave me</button>
+
+<h1>Enter Secret</h1>
+<input oninput="checkSecret()" id="secretInput">
+<p id="secretStatus"></p>
+
+
+<script>
+function buttonClick(){
+    alert("you have opened Roblox")
+}
+function dontComeNear(){
+    alert("dont come here please!")
+}
+function dontLeave(){
+    alert("pleae dont leave me!")
+}
+
+function checkSecret(){
+    let expectedSecret="MySecret";
+    let enteredSecret=document.getElementById("secretInput").value;
+let secretStatusP=document.getElementById("secretStatus")
+    if (enteredSecret===expectedSecret){
+        secretStatusP.innerText="Correct secret";
+        secretStatusP.style.color="green";
+    }
+    else{
+        secretStatusP.innerText="Wrong secret" ;
+        secretStatusP.style.color="red";
+    }
+
+
+}
+
+
+</script>
+
+
+
+
+
+</html>

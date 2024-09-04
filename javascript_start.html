@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<button onclick="buttonClicked()" >Click Me</button>
+<button onmouseenter="dontComeNear()">Don't come near me</button>
+<button onmouseleave="dontLeave()">Dont leave me</button>
+<h1>EnterSecret</h1>
+<input oninput="checkSecret()" id="secretInput">
+<p id="secretStatus"></p>
+
+
+<script>
+function dontComeNear(){
+    alert("Dont come here!")
+}
+
+function dontLeave(){
+    alert("Please come back")
+}
+
+function buttonClicked(){
+
+    alert("Ian is learning javascript")
+}
+function checkSecret(){
+    let expectedSecret="MySecret";
+    let enteredSecret=document.getElementById("secretInput").value;
+    let secretStatusP=document.getElementById("secretStatus"); 
+
+if (enteredSecret===expectedSecret){
+    secretStatusP.innerText="Correct secret";
+    secretStatusP.style.color="green";
+}
+else{
+    secretStatusP.innerText="Wrong Secret"
+    secretStatusP.style.color="red"
+}
+}
+</script>
+
+
+</body>
+
+
+</html>
