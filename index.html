@@ -1,92 +1,158 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-    <title> Ian Wanderi Gitimu Personal Website</title>
-    <link rel="icon" href="./images/ian.png">
+    <title>Tic-Tac-Toe Game</title>
+
+<style>
+    .row{
+        display: flex;
+    }
 
 
-    <style>
+.cell{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+}
+#c1{
+    border-left: 0px;
+    border-top: 0px;
+    border-color: aqua;
+}
+#c2{
+    border-top: 0px;
+    border-color: aqua;
+}
+#c3{
+    border-right: 0px;
+    border-top: 0px;
+    border-color: aqua;
+}
 
-.color-green{
-    color: rgb(34, 121, 148);
+#c4{
+    border-left: 0px;
+    border-color: aqua;
 }
-img {
-    border-radius: 50%;
+#c5{
+    border-color: aqua;
+}
+#c6{
+    border-right: 0px;
+    border-color: aqua;
+}
+#c7{
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: aqua;
+}
+#c8{
+    border-bottom: 0px;
+    border-color: aqua;
+}
+#c9{
+    border-bottom: 0px;
+    border-right: 0px;
+    border-color: aqua;
+}
+#style{
+    border-color: aqua;
+    border-style: solid;
+    width: fit-content;
+    display: flex;
+    margin-top: 2cm;
+    padding: 20px;
+    background-color: aqua;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: medium;
+}
 
-    height: 8cm;width: 8cm;
-}
 
-.dark{
-    background-color: rgb(255, 255, 255);
-    padding: .5cm;
-    font-size: large;
-}
-.profile{
-
-    margin-top: 1cm;
-}
-.name-heading{
-    color: rgb(182, 17, 17);
-}
-a{  
-    margin: .4cm;
-    text-decoration: none;
-}
-    </style>
+</style>
 </head>
+<body>
+<div>
+    <div id="time-container">
+<h2>Timer: </h2> <p id="timer"></p>
 
-<body id="color-blue" class="body-clas">
-
-
-    <div id="header" class="dark">
-
-        <h1 class="name-heading">Ian Wanderi</h1>
-        
-<a href="/">Home</a>
-<a href="/">School</a>
-<a href="./About.html">About</a>
-        <a href="./tic-tac-toe.html">Games</a>
+</div>
+<div>
+<h2>Scores</h2> 
+<p>playerA: <span id="playerAScores">0W 0L</span></p>
+<p>playerB: <span id="playerBScores">0W 0L</span></p>
+</div>
+</div>  
 
 
 
+<div id="Game">
+<div class="row" >
+
+    <div class="cell" id="c1" onclick="cellClicked(this)">
+  
+    </div>
+    <div class="cell" id="c2" onclick="cellClicked(this)">
+       
+    </div>
+    <div class="cell" id="c3" onclick="cellClicked(this)">
 
     </div>
-
-    <div id="main" class="">
-
-
-        <div id="profile" class="profile">
-
-<img class="rounded" title="Ian at home" src="./images/profile.png">
-
-<p>
-    This is Ian
-</p>
-</div>
-
-<p class="color-green">Hi there, my name is Ian Wanderi Gitimu,Iam a young boy with dreams that I hope will come true.I would like to thank you for coming to my Website</p>   
-
-<img class="rounded" src="./images/fornite.png">
-<img class="rounded" src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.jpg">
-<img class="rounded" src="https://i.pinimg.com/736x/de/3a/80/de3a805c7b138e4829e5da39cd4cc964.jpg">
-
 </div>
 
 
 
 
-<a href="#hearder">Back To Top</a>
+
+<div class="row">
+<div class="cell" id="c4" onclick="cellClicked(this)">
+
+</div>
+<div class="cell" id="c5" onclick="cellClicked(this)">
+
+</div>
+<div class="cell" id="c6" onclick="cellClicked(this)">
+
+</div>
+
+</div>
 
 
+
+
+
+
+<div class="row">
+<div class="cell" id="c7" onclick="cellClicked(this)">
+
+</div>
+<div class="cell" id="c8" onclick="cellClicked(this)">
+
+</div>
+<div class="cell" id="c9" onclick="cellClicked(this )">
+
+</div>
+</div>
+</div>
+
+
+<div>
+    <button id="style" onclick="resetGame()">reaload</button>
+</div>
+
+
+
+
+
+
+
+
+<script src="./tic_tac_toe.js">
+ 
+
+
+
+
+
+</script>
 </body>
-
-<footer>
-
-
-
-
-</footer>
-
 </html>
