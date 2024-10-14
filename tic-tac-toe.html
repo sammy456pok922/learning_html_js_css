@@ -57,15 +57,63 @@
 #style{
     border-color: aqua;
     border-style: solid;
+    color: white;
+    font-size: xx-large;
+    font-weight: 300;
+    font-family: Roboto;
     width: fit-content;
     display: flex;
     margin-top: 2cm;
     padding: 20px;
     background-color: aqua;
-    margin-left: 10px;
+    margin-left: 10px;  
     border-radius: 20px;
     font-size: medium;
+    font-style:italic;
 }
+#time-container{
+    border-style: solid;
+    width: fit-content;
+
+    display: flex;
+
+}
+#timer{
+    padding: 10px;
+    border-top: 5cm;
+    border-bottom: 5cm;
+    border-left: 5cm;
+    border-right: 5cm;
+}
+#Scores{
+    
+    padding: 10px;
+    border-style: solid;
+    border-color: aqua;
+    height: fit-content;
+    width: fit-content;
+}
+#Game{
+    margin: auto;
+  width: 50%;
+  
+  padding: 10px;
+}
+#controls{
+    margin: auto;
+  width: 50%;
+  
+  padding: 10px;
+}
+body{
+    background-image:url("https://media.istockphoto.com/id/1172427455/photo/beautiful-sunset-over-the-tropical-sea.jpg?s=612x612&w=0&k=20&c=i3R3cbE94hdu6PRWT7cQBStY_wknVzl2pFCjQppzTBg=");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+
 
 
 </style>
@@ -76,7 +124,7 @@
 <h2>Timer: </h2> <p id="timer"></p>
 
 </div>
-<div>
+<div id="Scores">
 <h2>Scores</h2> 
 <p>playerA: <span id="playerAScores">0W 0L</span></p>
 <p>playerB: <span id="playerBScores">0W 0L</span></p>
@@ -135,7 +183,7 @@
 </div>
 
 
-<div>
+<div id="controls">
     <button id="style" onclick="resetGame()">reaload</button>
 </div>
 
