@@ -8,6 +8,9 @@ let occupied_cells=[];
  let playerAloss=0;
  let playerBloss=0;
 
+ let playerAPlay=document.getElementById("playerAsound")
+ let playerBplay=document.getElementById("playerBsound")
+
 let winning_commbination=[
     ["c1", "c2", "c3"],
     ["c4", "c5", "c6"],
@@ -119,10 +122,10 @@ timeParagraph.innerText=secondsTaken+"s";
 
 
 
-// Stop here
 function resetGame(){
 
-
+    document.getElementById("playerBW").style.display="none";
+    document.getElementById("playerAW").style.display="none";
     let gameCells=document.getElementsByClassName("cell")
 
     for(let index=0;index<gameCells.length; index++){
@@ -140,13 +143,14 @@ function resetGame(){
     playerBCells=[];
     occupied_cells=[];
     secondsTaken=0;
+    document.getElementById('id01').style.display='none'
 
 
 
 
 }
 
-
+let modalHeading=document.getElementById("winning_header")
 function cellClicked(clickedDiv){
     if (nextPlayer===1){
         add_circle_to_div(clickedDiv)
@@ -154,12 +158,22 @@ function cellClicked(clickedDiv){
         nextPlayer=2;
         let winner=check_winner(playerACells)
         console.log("playerA:",winner)
+        // sound.pause();
+
+        playerAPlay.currentTime = 0;
+        playerAPlay.play();
         if (winner==true){
 
             playerAwins++;
             playerBloss++;
 
-            alert("playerA has won")
+            // document.getElementById("playerAW").style.display="block";
+
+            
+            modalHeading.innerText="Player A Has Won";
+            document.getElementById('id01').style.display='block'
+            document.getElementById("playerAmoves").innerText=playerACells.length
+            document.getElementById("playerBmoves").innerText=playerBCells.length
         }
 
     }
@@ -168,11 +182,17 @@ function cellClicked(clickedDiv){
         playerBCells.push(clickedDiv.id)
         nextPlayer=1;
         let winner=check_winner(playerBCells)
+        playerBplay.currentTime = 0;
+        playerBplay.play();
         if (winner==true){
 
             playerBwins++;
             playerAloss++;
-            alert("player B has won")
+           
+           modalHeading.innerText="Player B Has Won";
+            document.getElementById('id01').style.display='block'
+            document.getElementById("playerBmoves").innerText=playerBCells.length
+            document.getElementById("playerAmoves").innerText=playerACells.length
 
         }
         
