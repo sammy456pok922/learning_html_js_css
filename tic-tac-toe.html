@@ -119,7 +119,7 @@ background-size: cover;
     justify-content: center;
     color: aqua;
 }
-#Notification{
+#Information{
     margin-left: 50px;
 
 }
@@ -145,13 +145,34 @@ background-size: cover;
     color: aqua;
 }
 
+.container{
+    display: flex;
+    
+}
 
+#messages{
+    max-width: 25%;
+    
+}
+#gameSection{
+    min-width: 70%;
+}
+
+.partner{
+    color: aqua;
+}
+.me{
+    color: blue;
+}
 
 
 
 </style>
 </head>
 <body>
+
+    <div class="container">
+    <div id="gameSection">
 
     <div id="header">
 <div>
@@ -166,11 +187,14 @@ background-size: cover;
 </div>
 </div>  
 
-<div id="Notification">
+<div id="Information">
 
 
-    <p id="playerAW">Nice one, Player A has won.</p>
-    <p id="playerBW">Good one, Player B has won.</p>
+    <p >Your Id: <span id="yourId"></span></p>
+    <p >Playing with: <span id="partnerId"></span></p>
+
+    <input id="connectionId">
+    <button onclick="connectWithPartner()">Connect</button>
 
 </div>
 
@@ -258,14 +282,33 @@ background-size: cover;
     </div>
   </div>
 
-
-<script src="./tic_tac_toe.js">
- 
+</div>
 
 
+<div id="messages">
+
+
+    <h2>Messages</h2>
+    <div id="messageDisplay">
+
+       
+    </div>
+
+    <div>
+
+        <input id="messageInput"> <button onclick="sendMessage()">Send</button>
+    </div>
+    
+</div>
+
+</div>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+<script src="./tic_tac_toe.js"></script>
 
 
 
-</script>
+
 </body>
 </html>
