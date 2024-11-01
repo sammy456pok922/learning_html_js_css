@@ -127,7 +127,13 @@ timeParagraph.innerText=secondsTaken+"s";
 
 function resetGame(){
 
-    
+  
+
+    if (lastConnection){
+        client.publish(lastConnection+"/reset", "reset game")
+        console.log("Sent reset")
+    }
+      
     let gameCells=document.getElementsByClassName("cell")
 
     for(let index=0;index<gameCells.length; index++){
@@ -301,6 +307,11 @@ console.log("Connecting to "+message.toString())
     newP.classList.add("partner")
     messageDisplay.appendChild(newP);
 
+  }
+
+  if(action=="reset"){
+    resetGame();
+    console.log("Resetting game")
   }
 
 //   client.end()
