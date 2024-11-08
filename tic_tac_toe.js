@@ -1,4 +1,4 @@
-
+// New
 let occupied_cells=[];
 let yourId;
 
