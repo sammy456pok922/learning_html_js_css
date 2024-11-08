@@ -152,7 +152,18 @@ background-size: cover;
 
 #messages{
     max-width: 25%;
+    border-style: solid;
+    border-color: aqua;
+    width: fit-content;
+    height: fit-content;
     
+}
+input{
+    padding: 6px;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: aqua;
 }
 #gameSection{
     min-width: 70%;
@@ -252,7 +263,7 @@ background-size: cover;
 
 
 <div id="controls">
-    <button id="style" onclick="resetGame()">reaload</button>
+    <button id="style" onclick="resetGame(true)">Reaload</button>
 </div>
 
 
@@ -277,7 +288,7 @@ background-size: cover;
         <p>Player B Moves: <span id="playerBmoves"></span></p>
       </div>
       <footer class="w3-container">
-        <button id="styling" onclick="resetGame()" id="restartGame">Restart Game</button>
+        <button id="styling" onclick="resetGame(true)" id="restartGame">Restart Game</button>
       </footer>
     </div>
   </div>
